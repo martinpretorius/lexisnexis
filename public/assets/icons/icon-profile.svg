@@ -1,0 +1,7 @@
+<svg id="icon-profile" xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 36 36">
+  <rect id="Rectangle_1696" data-name="Rectangle 1696" width="36" height="36" fill="#d3d4d4" opacity="0"/>
+  <g id="icon_7" transform="translate(5.25 5.25)">
+    <path id="Path_52" data-name="Path 52" d="M46.327,48.228" transform="translate(-35.165 -36.62)" fill="none" stroke="#8d8d8d" stroke-linecap="round" stroke-width="2"/>
+    <path id="Path_53" data-name="Path 53" d="M28.767,37.106a11.206,11.206,0,0,0-.042-1.76.905.905,0,0,0-.271-.546c-1.6-1.226-1.621-7.783-1.621-7.783l-.01-.373-.015-1.165c0-2.905,2.542-4.482,4.961-4.482h.484c2.419,0,4.887,1.591,4.887,4.5l-.058,1.174-.024.361s-.026,6.551-1.628,7.777a.9.9,0,0,0-.275.543,6.123,6.123,0,0,0-.049,1.943c.087.441.9.761.98.8.557.277,6.748,2.545,7.092,2.766.6.384,1.255,2.482,1.359,3.563l.117,1.22c.061.224-.1.829-.319.829H19.542c-.222,0-.379-.5-.318-.725l.376-2.284a5.876,5.876,0,0,1,1.492-2.941l6.429-2.407.292-.1S28.743,37.631,28.767,37.106Z" transform="translate(-19.211 -20.999)" fill="none" stroke="#8d8d8d" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+  </g>
+</svg>

@@ -1,0 +1,50 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
+@import 'config';
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: $font-stack;
+}
+
+body {
+  background-color: #0E0E0E !important;
+}
+
+#root {
+  display: flex;
+  margin: 0 auto;  
+  max-width: 1920px;  
+  height: 1355px;
+  box-shadow: 0 0 6px #ccc;  
+}
+
+.grid-container {
+  width: 100%;  
+  display: grid;
+  grid-template-rows: 3rem repeat(8, 1fr) 3rem;
+  grid-template-columns: 1rem repeat(2, 1fr) 0rem calc(100vw / 4) 1rem;
+  grid-template-areas:
+    "..... ..... ..... ..... ..... ....."
+    "..... newWi newWi ..... topRi ....."
+    "..... newWi newWi ..... right ....."
+    "..... newWi newWi ..... right ....."
+    "..... newWi newWi ..... right ....."
+    "..... bLeft bMidd ..... right ....."
+    "..... bLeft bMidd ..... right ....."
+    "..... bLeft bMidd ..... right ....."
+    "..... bLeft bMidd ..... right ....."
+    "..... ..... ..... ..... ..... .....";
+  gap: 1rem;
+  background-color: $bg-color;
+}
+
+@import 'Navigation';
+@import 'Dashboard_NewWidget';
+@import 'Dashboard_TopRight';
+@import 'Dashboard_Right';
+@import 'Dashboard_BottomLeft';
+@import 'Dashboard_BottomMiddle';
+
+@import 'media-queries';

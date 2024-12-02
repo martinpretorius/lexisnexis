@@ -1,0 +1,106 @@
+.db_newWidget {
+  grid-area: newWi;
+  display: grid;
+  grid-template: repeat(3, 1fr) 1fr / 1fr;
+  grid-template-areas:
+    "main"
+    "main"
+    "main"
+    "totl";
+  background-color: whitesmoke;
+  width: 100%;
+}
+
+.newWidget_main {
+  background-color: $newWidget-bg-color;
+  background-image: url("/assets/images/illustration.svg");
+  background-repeat: no-repeat;
+  background-size: 30rem;
+  background-position: 90% 50%;
+  grid-area: main;
+  border-top-left-radius: 0.5rem;
+  border-top-right-radius: 0.5rem;
+}
+
+.newWidget_text_container {
+  top: 5rem;
+  left: 3.5rem;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.newWidget_header {
+  font-size: 2.8125rem;
+  color: $newWidget-text-color;
+}
+
+.newWidget_text {
+  font-size: 1.625rem;
+  color: $newWidget-text-color;
+  font-weight: 300;
+  margin: 0;
+  padding: 0;
+}
+
+.btn-newWidget {
+  margin-top: 3rem;
+  gap: 1rem;
+  padding: 0.8rem 2rem;
+  width: 17.5rem;
+  border-radius: 0.5rem;
+  border: none;
+  background-color: $primary-color;
+  color: #FFFFFF;
+  font-size: 1.125rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.newWidget_widgetTotals {
+  grid-area: totl;
+  background-color: #FFFFFF;
+  height: 100%;
+  border-bottom-left-radius: 0.5rem;
+  border-bottom-right-radius: 0.5rem;
+}
+
+.totals-container {
+  display: flex;
+  justify-content: space-between;
+  height: 100%;
+  padding: 1.5rem 1.1875rem;
+}
+
+.totals {
+  width: 33%;
+  border-right: 1px solid #ccc;
+  padding-left: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.totals:first-child {
+  padding-left: 0;
+}
+
+.totals:last-child {
+  border: none;
+}
+
+.totals-title {
+  color: $totals-text-color;
+  font-size: 1rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 1.6px;
+}
+
+.totals-text {
+  color: $primary-color;
+  font-size: 3.4375rem;
+  font-weight: bold;
+}
