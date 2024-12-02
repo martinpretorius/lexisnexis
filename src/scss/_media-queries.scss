@@ -11,6 +11,10 @@
 }
 
 @media (max-width: 1500px) {
+  .grid-container {
+    grid-template-rows: 1rem repeat(8, 1fr) 1rem;
+  }
+  
   .sidebar {
     display: none;
   }
@@ -110,8 +114,8 @@
   .grid-container {
     width: 100%;
     display: grid;
-    grid-template-rows: 3rem repeat(13, 1fr) 3rem;
-    grid-template-columns: 3rem repeat(2, 1fr) 3rem;
+    grid-template-rows: 1rem repeat(13, 1fr) 1rem;
+    grid-template-columns: 1rem repeat(2, 1fr) 1rem;
     grid-template-areas:
       "..... ..... ..... ....."
       "..... newWi newWi ....."
@@ -207,8 +211,8 @@
 @media (max-width: 900px) {
   .grid-container {
     width: 100%;
-    grid-template-rows: 3rem repeat(17, 1fr) 3rem;
-    grid-template-columns: 3rem 1fr 3rem;
+    grid-template-rows: 1rem repeat(17, 1fr) 1rem;
+    grid-template-columns: 1rem 1fr 1rem;
     grid-template-areas:
       "..... ..... ....."
       "..... newWi ....."
@@ -274,8 +278,8 @@
 
 @media (max-width: 850px) {
   .grid-container {
-    grid-template-rows: 2rem repeat(17, 1fr) 2rem;
-    grid-template-columns: 2rem 1fr 2rem;
+    grid-template-rows: 1rem repeat(17, 1fr) 1rem;
+    grid-template-columns: 1rem 1fr 1rem;
   }
 
   .db_newWidget {
