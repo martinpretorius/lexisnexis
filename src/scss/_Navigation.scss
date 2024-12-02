@@ -78,14 +78,20 @@
 
 .sidebar-text {
   color: #C6C6C6;
+  text-shadow: 0 0 1px #333;
 }
 
 .sidebar li:first-child {
   background-color: $bg-color;
 }
 
-.sidebar li:first-child .sidebar-text {
-  color: #333333;
+.sidebar li:hover {
+  background-color: $bg-color;
+}
+
+.sidebar li:hover .sidebar-text,
+.sidebar li:first-child .sidebar-text  {
+  color: #333;
 }
 
 .sidebar-toggle {

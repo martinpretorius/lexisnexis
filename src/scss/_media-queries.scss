@@ -73,6 +73,8 @@
   .sidebar-mobile ul li {
     padding: 1.5rem 0rem;
     text-align: left;
+    border-top-left-radius: 0.5rem;
+    border-bottom-left-radius: 0.5rem;
   }
 
   .sidebar-mobile ul li:first-child {
@@ -81,21 +83,27 @@
     border-bottom-left-radius: 0.5rem;
     padding-right: 0;
     margin-right: 0;
-  }
+  }  
 
   .sidebar-mobile ul li a {
-    color: white;
+    color: #C6C6C6;
     text-decoration: none;
-    font-size: 18px;
+    font-size: 1.25rem;
     display: block;
+    text-shadow: 0 0 1px #333;
   }
 
   .sidebar-mobile ul li:first-child a {
     color: #333;
-  }
+  }  
 
-  .sidebar-mobile ul li a:hover {
-    background-color: #444;
+  .sidebar-mobile li:hover {
+    background-color: $bg-color;
+  }
+  
+  .sidebar-mobile li:hover a ,
+  .sidebar-mobile li:first-child a {
+    color: #333;
   }
 
   .mobile-logo {
