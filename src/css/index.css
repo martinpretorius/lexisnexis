@@ -534,6 +534,7 @@ body {
     border-bottom: none;
     padding-left: 1rem;
     text-align: center;
+    padding-left: 0rem;
   }
   .totals:first-child {
     padding-left: 0rem;
