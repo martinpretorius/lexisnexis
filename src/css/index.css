@@ -513,8 +513,6 @@ body {
     background-position: 90% 100%;
   }
   .newWidget_text_container {
-    top: 1.5rem;
-    left: 3.5rem;
     gap: 0rem;
   }
   .newWidget_header {
