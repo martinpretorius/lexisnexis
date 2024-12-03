@@ -367,7 +367,7 @@ body {
     width: 100%;
   }
   .sidebar-mobile ul li {
-    padding: 1.5rem 0rem;
+    padding: 1.25rem;
     text-align: left;
     border-top-left-radius: 0.5rem;
     border-bottom-left-radius: 0.5rem;
@@ -614,7 +614,7 @@ body {
     top: 2rem;
   }
   .sidebar-mobile ul li {
-    padding: 0.8rem 0rem;
+    padding: 0.8rem;
   }
   .sidebar-mobile ul li a {
     color: white;
