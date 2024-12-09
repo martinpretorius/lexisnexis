@@ -47,10 +47,6 @@
     background-image: url('/assets/images/bgPattern.svg');
   }
 
-  .offcanvas {
-    width: 300px !important;
-  }
-
   .sidebar-mobile ul {
     list-style: none;
     margin: 0;
@@ -356,6 +352,10 @@
 }
 
 @media (max-width: 640px) {
+  .offcanvas {
+    width: 300px !important;
+  }
+
   .db_newWidget {
     grid-template: repeat(5, 1fr) / 1fr;
     grid-template-areas:
