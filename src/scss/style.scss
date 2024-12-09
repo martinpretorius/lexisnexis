@@ -9,33 +9,35 @@
 }
 
 body {
-  background-color: #0E0E0E !important;
+  background-color: #0e0e0e !important;
+  overflow: auto !important;
+  padding-right: 0 !important;
 }
 
 #root {
   display: flex;
-  margin: 0 auto;  
-  max-width: 1920px;  
+  margin: 0 auto;
+  max-width: 1920px;
   height: 1355px;
-  box-shadow: 0 0 6px #ccc;  
+  box-shadow: 0 0 6px #ccc;
 }
 
 .grid-container {
-  width: 100%;  
+  width: 100%;
   display: grid;
   grid-template-rows: 3rem repeat(8, 1fr) 3rem;
-  grid-template-columns: 1rem repeat(2, 1fr) 0rem calc(100vw / 4) 1rem;
+  grid-template-columns: 1rem repeat(2, 1fr) 0rem 30rem 1rem;
   grid-template-areas:
-    "..... ..... ..... ..... ..... ....."
-    "..... newWi newWi ..... topRi ....."
-    "..... newWi newWi ..... right ....."
-    "..... newWi newWi ..... right ....."
-    "..... newWi newWi ..... right ....."
-    "..... bLeft bMidd ..... right ....."
-    "..... bLeft bMidd ..... right ....."
-    "..... bLeft bMidd ..... right ....."
-    "..... bLeft bMidd ..... right ....."
-    "..... ..... ..... ..... ..... .....";
+    '..... ..... ..... ..... ..... .....'
+    '..... newWi newWi ..... topRi .....'
+    '..... newWi newWi ..... right .....'
+    '..... newWi newWi ..... right .....'
+    '..... newWi newWi ..... right .....'
+    '..... bLeft bMidd ..... right .....'
+    '..... bLeft bMidd ..... right .....'
+    '..... bLeft bMidd ..... right .....'
+    '..... bLeft bMidd ..... right .....'
+    '..... ..... ..... ..... ..... .....';
   gap: 1rem;
   background-color: $bg-color;
 }

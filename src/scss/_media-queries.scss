@@ -14,7 +14,7 @@
   .grid-container {
     grid-template-rows: 1rem repeat(8, 1fr) 1rem;
   }
-  
+
   .sidebar {
     display: none;
   }
@@ -43,23 +43,12 @@
   }
 
   .sidebar-mobile {
-    display: block;
-    position: fixed;
-    top: 0;
-    left: -300px;
-    width: 300px;
-    height: 100%;
-    color: white;
-    transition: left 0.3s ease;
-    z-index: 1000;
-    padding: 2rem 0 2rem 1rem;
     background-color: $sidebar-bg-color;
-    background-image: url("/assets/images/bgPattern.svg");
-    text-align: center;
+    background-image: url('/assets/images/bgPattern.svg');
   }
 
-  .sidebar-mobile.open {
-    left: 0;
+  .offcanvas {
+    width: 300px !important;
   }
 
   .sidebar-mobile ul {
@@ -83,10 +72,10 @@
     border-bottom-left-radius: 0.5rem;
     padding-right: 0;
     margin-right: 0;
-  }  
+  }
 
   .sidebar-mobile ul li a {
-    color: #C6C6C6;
+    color: #c6c6c6;
     text-decoration: none;
     font-size: 1.25rem;
     display: block;
@@ -95,13 +84,13 @@
 
   .sidebar-mobile ul li:first-child a {
     color: #333;
-  }  
+  }
 
   .sidebar-mobile li:hover {
     background-color: $bg-color;
   }
-  
-  .sidebar-mobile li:hover a ,
+
+  .sidebar-mobile li:hover a,
   .sidebar-mobile li:first-child a {
     color: #333;
   }
@@ -125,21 +114,21 @@
     grid-template-rows: 1rem repeat(13, 1fr) 1rem;
     grid-template-columns: 1rem repeat(2, 1fr) 1rem;
     grid-template-areas:
-      "..... ..... ..... ....."
-      "..... newWi newWi ....."
-      "..... newWi newWi ....."
-      "..... newWi newWi ....."
-      "..... newWi newWi ....."
-      "..... bLeft bMidd ....."
-      "..... bLeft bMidd ....."
-      "..... bLeft bMidd ....."
-      "..... bLeft bMidd ....."
-      "..... topRi topRi ....."
-      "..... right right ....."
-      "..... right right ....."
-      "..... right right ....."
-      "..... right right ....."
-      "..... ..... ..... .....";
+      '..... ..... ..... .....'
+      '..... newWi newWi .....'
+      '..... newWi newWi .....'
+      '..... newWi newWi .....'
+      '..... newWi newWi .....'
+      '..... bLeft bMidd .....'
+      '..... bLeft bMidd .....'
+      '..... bLeft bMidd .....'
+      '..... bLeft bMidd .....'
+      '..... topRi topRi .....'
+      '..... right right .....'
+      '..... right right .....'
+      '..... right right .....'
+      '..... right right .....'
+      '..... ..... ..... .....';
     gap: 1rem;
     background-color: $bg-color;
   }
@@ -147,25 +136,19 @@
   .db_newWidget {
     grid-template: 1fr 1fr / 1fr 1fr 1fr;
     grid-template-areas:
-      "main main totl"
-      "main main totl";
+      'main main totl'
+      'main main totl';
   }
 
   .newWidget_main {
-    background-color: #C2E3F2;
-    background-image: url("/assets/images/illustration.svg");
-    background-repeat: no-repeat;
-    background-size: 25rem;
+    background-size: 26rem;
     background-position: 100% 90%;
-    border-top-left-radius: 0.5rem;
     border-bottom-left-radius: 0.5rem;
     border-top-right-radius: 0;
   }
 
   .newWidget_widgetTotals {
     border-bottom-left-radius: 0rem;
-    border-top-right-radius: 0.5rem;
-    border-bottom-right-radius: 0.5rem;
   }
 
   .totals-container {
@@ -222,25 +205,25 @@
     grid-template-rows: 1rem repeat(17, 1fr) 1rem;
     grid-template-columns: 1rem 1fr 1rem;
     grid-template-areas:
-      "..... ..... ....."
-      "..... newWi ....."
-      "..... newWi ....."
-      "..... newWi ....."
-      "..... newWi ....."
-      "..... bLeft ....."
-      "..... bLeft ....."
-      "..... bLeft ....."
-      "..... bLeft ....."
-      "..... bMidd ....."
-      "..... bMidd ....."
-      "..... bMidd ....."
-      "..... bMidd ....."
-      "..... topRi ....."
-      "..... right ....."
-      "..... right ....."
-      "..... right ....."
-      "..... right ....."
-      "..... ..... .....";
+      '..... ..... .....'
+      '..... newWi .....'
+      '..... newWi .....'
+      '..... newWi .....'
+      '..... newWi .....'
+      '..... bLeft .....'
+      '..... bLeft .....'
+      '..... bLeft .....'
+      '..... bLeft .....'
+      '..... bMidd .....'
+      '..... bMidd .....'
+      '..... bMidd .....'
+      '..... bMidd .....'
+      '..... topRi .....'
+      '..... right .....'
+      '..... right .....'
+      '..... right .....'
+      '..... right .....'
+      '..... ..... .....';
     gap: 1rem;
     background-color: $bg-color;
   }
@@ -293,14 +276,16 @@
   .db_newWidget {
     grid-template: repeat(4, 1fr) / 1fr;
     grid-template-areas:
-      "main"
-      "main"
-      "main"
-      "totl";
+      'main'
+      'main'
+      'main'
+      'totl';
   }
 
   .newWidget_main {
     background-position: 90% 100%;
+    border-top-right-radius: 0.5rem;
+    border-bottom-left-radius: 0;
   }
 
   .newWidget_text_container {
@@ -317,6 +302,10 @@
 
   .btn-newWidget {
     margin-top: 1.5rem;
+  }
+
+  .newWidget_widgetTotals {
+    border-bottom-left-radius: 0.5rem;
   }
 
   .totals-container {
@@ -349,10 +338,10 @@
   .db_newWidget {
     grid-template: repeat(4, 1fr) / 1fr;
     grid-template-areas:
-      "main"
-      "main"
-      "totl"
-      "totl";
+      'main'
+      'main'
+      'totl'
+      'totl';
     height: 500px;
   }
 
@@ -370,11 +359,11 @@
   .db_newWidget {
     grid-template: repeat(5, 1fr) / 1fr;
     grid-template-areas:
-      "main"
-      "main"
-      "main"
-      "totl"
-      "totl";
+      'main'
+      'main'
+      'main'
+      'totl'
+      'totl';
     height: 600px;
     text-align: center;
   }
@@ -457,7 +446,8 @@
     min-width: 900px;
   }
 
-  .db_topRight, .db_right {
+  .db_topRight,
+  .db_right {
     max-width: 500px;
   }
 }

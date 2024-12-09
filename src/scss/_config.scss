@@ -1,7 +1,38 @@
-$font-stack: "Lato", sans-serif;
+$font-stack: 'Lato', sans-serif;
 $primary-color: #006998;
-$bg-color: #F4F5F7;
+$bg-color: #f4f5f7;
 $sidebar-bg-color: #001722;
-$newWidget-bg-color: #C2E3F2;
-$newWidget-text-color: #04293A;
+$newWidget-bg-color: #c2e3f2;
+$newWidget-text-color: #04293a;
 $totals-text-color: #666666;
+
+// custom variables
+// $primary: #006998;
+// $enable-cssgrid: true;
+
+// @import '../../node_modules/bootstrap/scss/functions';
+// @import '../../node_modules/bootstrap/scss/variables';
+
+// custom map of spacing for margin, padding and gutters
+// $custom-spacing: (
+//   'c1': 1rem,
+//   'c2': 2rem,
+//   'c3': 3rem,
+//   'c4': 4rem,
+// );
+
+// $custom-breakpoints: (
+//   500: 500px,
+//   640: 640px,
+//   786: 786px,
+//   850: 850px,
+//   900: 900px,
+//   1000: 1000px,
+//   1200: 1200px,
+// );
+
+// $spacers: map-merge($custom-spacing, $spacers);
+// $grid-breakpoints: map-merge($grid-breakpoints, $custom-breakpoints);
+
+// import bootstrap
+// @import '../../node_modules/bootstrap/scss/bootstrap';

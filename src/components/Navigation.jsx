@@ -1,33 +1,28 @@
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import menuData from '../menuData.json'; // Import the JSON data
 import logo from '/assets/images/logo.svg';
 import logoSimple from '/assets/images/logo-simple.svg';
+import OffcanvasSidebarMenu from './OffcanvasSidebarMenu';
 
 const Navigation = () => {
   // State for managing the sidebar (expanded or collapsed)
   const [isSidebarOpen, setIsSidebarOpen] = useState(true); // true means expanded
   const [isTextVisible, setIsTextVisible] = useState(true); // For text visibility
 
-  const [isMobileSidebarOpen, setIsMobileSidebarOpen] = useState(false);
-
-  // Simulate fetching data from the imported JSON (no need to use `fetch` here)
-  const menuItems = menuData; // Use the imported menu data directly
+  // Simulate fetching data from the imported JSON
+  const menuItems = menuData;
 
   const toggleSidebar = () => {
     setIsSidebarOpen(!isSidebarOpen);
   };
 
-  const toggleMobileSidebar = () => {
-    setIsMobileSidebarOpen(!isMobileSidebarOpen);
-  };
-
-  // When the sidebar opens or closes, we toggle the visibility of the text after the animation
+  // When the sidebar opens or closes, toggle the visibility of the text after the animation
   useEffect(() => {
     if (isSidebarOpen) {
       // Wait for the sidebar to expand before showing the text
       const timeout = setTimeout(() => {
         setIsTextVisible(true);
-      }, 200); // Same duration as the sidebar expansion
+      }, 300); // Same duration as the sidebar expansion
       return () => clearTimeout(timeout); // Clean up the timeout on unmount
     } else {
       // Hide the text immediately when closing
@@ -37,17 +32,32 @@ const Navigation = () => {
 
   return (
     <>
-      <div className={`sidebar ${isSidebarOpen ? 'open' : 'collapsed'}`}>
+      <div
+        className={`sidebar position-relative top-0 left-0 
+          ${isSidebarOpen ? 'open' : 'collapsed'}
+        `}
+      >
         {/* Toggle Button Inside the Sidebar */}
-        <button className="sidebar-toggle" onClick={toggleSidebar}>
+        <button
+          className="position-absolute border-0 d-flex justify-content-end align-items-center sidebar-toggle"
+          onClick={toggleSidebar}
+        >
           {isSidebarOpen ? (
-            <i className="bi bi-chevron-left"></i>
+            <img
+              src={'assets/icons/icon-chevron.svg'}
+              className="chevron-left"
+              alt="Arrow pointing left to collapse sidebar menu."
+            />
           ) : (
-            <i className="bi bi-chevron-right"></i>
+            <img
+              src={'assets/icons/icon-chevron.svg'}
+              className="chevron-right"
+              alt="Arrow pointing right to expand sidebar menu."
+            />
           )}
         </button>
 
-        <div className="logo_container">
+        <div className="logo_container position-relative">
           {isSidebarOpen && isTextVisible ? (
             <img src={logo} alt="LexisNexis logo." className="logo" />
           ) : (
@@ -55,10 +65,13 @@ const Navigation = () => {
           )}
         </div>
 
-        <ul>
+        <ul className="position-relative overflow-hidden m-0 p-0">
           {menuItems.map((item) => (
-            <li key={item.id}>
-              <a href={item.link} className="menu-item">
+            <li className="rounded-3" key={item.id}>
+              <a
+                href={item.link}
+                className="d-flex align-items-center gap-3 text-decoration-none menu-item"
+              >
                 <img src={item.icon} className="sidebar-icon" alt="icon" />
                 {/* Only show the text when the sidebar is open and text is visible */}
                 {isSidebarOpen && isTextVisible && (
@@ -70,36 +83,7 @@ const Navigation = () => {
         </ul>
       </div>
 
-      <div className="app">
-        {/* Hamburger Icon */}
-        <button
-          className="hamburger-btn"
-          onClick={toggleMobileSidebar}
-          aria-label="Toggle sidebar"
-        >
-          <i className="bi bi-list"></i>
-        </button>
-
-        {/* Sidebar */}
-        <div className={`sidebar-mobile ${isMobileSidebarOpen ? 'open' : ''}`}>
-          <img src={logo} alt="LexisNexis logo." className="mobile-logo" />
-
-          <ul>
-            {menuItems.map((item) => (
-              <li key={item.id}>
-                <a href={item.link} className="mobile-menu-item">
-                  <img
-                    src={item.icon}
-                    className="mobile-sidebar-icon"
-                    alt="icon"
-                  />
-                  <span className="mobile-sidebar-text">{item.name}</span>
-                </a>
-              </li>
-            ))}
-          </ul>
-        </div>
-      </div>
+      <OffcanvasSidebarMenu menuItems={menuItems} />
     </>
   );
 };

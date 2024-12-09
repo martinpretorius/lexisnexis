@@ -1,35 +1,21 @@
-.sidebar-mobile,
 .hamburger-btn {
   display: none;
 }
 
 .sidebar {
-  grid-area: sideb;
-  position: relative;
-  top: 0;
-  left: 0;
   width: calc(100vw / 5.68);
-  max-width: 400px;
+  width: 21.125rem;
   background-color: $sidebar-bg-color;
-  background-image: url("/assets/images/bgPattern.svg");
+  background-image: url('/assets/images/bgPattern.svg');
   transition: width 0.3s ease;
   flex-shrink: 0;
 }
 
 .sidebar.collapsed {
   width: 6rem;
-  position: relative;
-}
-
-.sidebar .text {
-  display: inline;
-  transition: opacity 0.3s ease;
-  left: 0;
-  position: relative;
 }
 
 .logo_container {
-  position: relative;
   top: 3rem;
   left: 2.5rem;
 }
@@ -41,13 +27,9 @@
 
 .sidebar ul {
   list-style-type: none;
-  padding: 0;
-  margin: 0;
-  position: relative;
   top: 9rem;
   width: calc(100% - 0.8em);
   left: 2.4375rem;
-  overflow: hidden;
 }
 
 .sidebar.collapsed .logo_container {
@@ -59,10 +41,6 @@
 }
 
 .sidebar .menu-item {
-  display: flex;
-  align-items: center;
-  text-decoration: none;
-  gap: 1rem;
   padding: 1.25rem;
 }
 
@@ -72,12 +50,10 @@
 
 .sidebar li {
   font-size: 1.25rem;
-  display: block;
-  border-radius: 0.5rem;
 }
 
 .sidebar-text {
-  color: #C6C6C6;
+  color: #c6c6c6;
   text-shadow: 0 0 1px #333;
 }
 
@@ -90,26 +66,19 @@
 }
 
 .sidebar li:hover .sidebar-text,
-.sidebar li:first-child .sidebar-text  {
+.sidebar li:first-child .sidebar-text {
   color: #333;
 }
 
 .sidebar-toggle {
-  position: absolute;
   top: 4rem;
   right: -1.2rem;
   background: $sidebar-bg-color;
-  color: white;
-  border: none;
   cursor: pointer;
   z-index: 1000;
   width: 1.875rem;
   height: 1.875rem;
-  text-align: center;
-  display: flex;
-  align-items: center;
-  justify-content: end;
-  border-radius: .25rem;
+  border-radius: 0.25rem;
 }
 
 .sidebar-toggle:focus {
@@ -121,22 +90,16 @@
   height: 2.25rem;
 }
 
-.bi-chevron-left,
-.bi-chevron-right {
-  font-size: 1rem;
-  text-shadow: 0 0 1px white;
-  padding-right: 0.25rem;
+.chevron-left,
+.chevron-right {
+  transition: transform 0.4s;
 }
 
-/* For handling the smooth visibility of text */
-.sidebar-text {
-  visibility: hidden;
-  opacity: 0;
-  transition: opacity 0.3s ease;
+.chevron-left {
+  margin-right: 0.35rem;
 }
 
-.sidebar.open .sidebar-text {
-  visibility: visible;
-  opacity: 1;
-  transition: opacity 0.3s ease;
+.chevron-right {
+  margin-right: 0.25rem;
+  transform: rotateY(180deg);
 }

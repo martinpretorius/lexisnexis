@@ -7,7 +7,9 @@
 }
 
 body {
-  background-color: #0E0E0E !important;
+  background-color: #0e0e0e !important;
+  overflow: auto !important;
+  padding-right: 0 !important;
 }
 
 #root {
@@ -22,24 +24,19 @@ body {
   width: 100%;
   display: grid;
   grid-template-rows: 3rem repeat(8, 1fr) 3rem;
-  grid-template-columns: 1rem repeat(2, 1fr) 0rem 25vw 1rem;
+  grid-template-columns: 1rem repeat(2, 1fr) 0rem 30rem 1rem;
   grid-template-areas: "..... ..... ..... ..... ..... ....." "..... newWi newWi ..... topRi ....." "..... newWi newWi ..... right ....." "..... newWi newWi ..... right ....." "..... newWi newWi ..... right ....." "..... bLeft bMidd ..... right ....." "..... bLeft bMidd ..... right ....." "..... bLeft bMidd ..... right ....." "..... bLeft bMidd ..... right ....." "..... ..... ..... ..... ..... .....";
   gap: 1rem;
-  background-color: #F4F5F7;
+  background-color: #f4f5f7;
 }
 
-.sidebar-mobile,
 .hamburger-btn {
   display: none;
 }
 
 .sidebar {
-  grid-area: sideb;
-  position: relative;
-  top: 0;
-  left: 0;
   width: 17.6056338028vw;
-  max-width: 400px;
+  width: 21.125rem;
   background-color: #001722;
   background-image: url("/assets/images/bgPattern.svg");
   transition: width 0.3s ease;
@@ -48,18 +45,9 @@ body {
 
 .sidebar.collapsed {
   width: 6rem;
-  position: relative;
-}
-
-.sidebar .text {
-  display: inline;
-  transition: opacity 0.3s ease;
-  left: 0;
-  position: relative;
 }
 
 .logo_container {
-  position: relative;
   top: 3rem;
   left: 2.5rem;
 }
@@ -71,13 +59,9 @@ body {
 
 .sidebar ul {
   list-style-type: none;
-  padding: 0;
-  margin: 0;
-  position: relative;
   top: 9rem;
   width: calc(100% - 0.8em);
   left: 2.4375rem;
-  overflow: hidden;
 }
 
 .sidebar.collapsed .logo_container {
@@ -89,10 +73,6 @@ body {
 }
 
 .sidebar .menu-item {
-  display: flex;
-  align-items: center;
-  text-decoration: none;
-  gap: 1rem;
   padding: 1.25rem;
 }
 
@@ -102,21 +82,19 @@ body {
 
 .sidebar li {
   font-size: 1.25rem;
-  display: block;
-  border-radius: 0.5rem;
 }
 
 .sidebar-text {
-  color: #C6C6C6;
+  color: #c6c6c6;
   text-shadow: 0 0 1px #333;
 }
 
 .sidebar li:first-child {
-  background-color: #F4F5F7;
+  background-color: #f4f5f7;
 }
 
 .sidebar li:hover {
-  background-color: #F4F5F7;
+  background-color: #f4f5f7;
 }
 
 .sidebar li:hover .sidebar-text,
@@ -125,20 +103,13 @@ body {
 }
 
 .sidebar-toggle {
-  position: absolute;
   top: 4rem;
   right: -1.2rem;
   background: #001722;
-  color: white;
-  border: none;
   cursor: pointer;
   z-index: 1000;
   width: 1.875rem;
   height: 1.875rem;
-  text-align: center;
-  display: flex;
-  align-items: center;
-  justify-content: end;
   border-radius: 0.25rem;
 }
 
@@ -151,24 +122,18 @@ body {
   height: 2.25rem;
 }
 
-.bi-chevron-left,
-.bi-chevron-right {
-  font-size: 1rem;
-  text-shadow: 0 0 1px white;
-  padding-right: 0.25rem;
+.chevron-left,
+.chevron-right {
+  transition: transform 0.4s;
 }
 
-/* For handling the smooth visibility of text */
-.sidebar-text {
-  visibility: hidden;
-  opacity: 0;
-  transition: opacity 0.3s ease;
+.chevron-left {
+  margin-right: 0.35rem;
 }
 
-.sidebar.open .sidebar-text {
-  visibility: visible;
-  opacity: 1;
-  transition: opacity 0.3s ease;
+.chevron-right {
+  margin-right: 0.25rem;
+  transform: rotateY(180deg);
 }
 
 .db_newWidget {
@@ -181,7 +146,7 @@ body {
 }
 
 .newWidget_main {
-  background-color: #C2E3F2;
+  background-color: #c2e3f2;
   background-image: url("/assets/images/illustration.svg");
   background-repeat: no-repeat;
   background-size: 30rem;
@@ -202,12 +167,12 @@ body {
 
 .newWidget_header {
   font-size: 2.8125rem;
-  color: #04293A;
+  color: #04293a;
 }
 
 .newWidget_text {
   font-size: 1.625rem;
-  color: #04293A;
+  color: #04293a;
   font-weight: 300;
   margin: 0;
   padding: 0;
@@ -221,7 +186,7 @@ body {
   border-radius: 0.5rem;
   border: none;
   background-color: #006998;
-  color: #FFFFFF;
+  color: #ffffff;
   font-size: 1.125rem;
   display: flex;
   justify-content: center;
@@ -230,7 +195,7 @@ body {
 
 .newWidget_widgetTotals {
   grid-area: totl;
-  background-color: #FFFFFF;
+  background-color: #ffffff;
   height: 100%;
   border-bottom-left-radius: 0.5rem;
   border-bottom-right-radius: 0.5rem;
@@ -276,30 +241,18 @@ body {
 
 .db_topRight {
   grid-area: topRi;
-  width: 100%;
-  border-radius: 0.5rem;
-  background-color: #FFFFFF;
 }
 
 .db_right {
   grid-area: right;
-  width: 100%;
-  border-radius: 0.5rem;
-  background-color: #FFFFFF;
 }
 
 .db_bottomLeft {
   grid-area: bLeft;
-  width: 100%;
-  border-radius: 0.5rem;
-  background-color: #FFFFFF;
 }
 
 .db_bottomMiddle {
   grid-area: bMidd;
-  width: 100%;
-  border-radius: 0.5rem;
-  background-color: #FFFFFF;
 }
 
 @media (max-width: 1850px) {
@@ -342,22 +295,11 @@ body {
     box-shadow: 0 0 2px #000;
   }
   .sidebar-mobile {
-    display: block;
-    position: fixed;
-    top: 0;
-    left: -300px;
-    width: 300px;
-    height: 100%;
-    color: white;
-    transition: left 0.3s ease;
-    z-index: 1000;
-    padding: 2rem 0 2rem 1rem;
     background-color: #001722;
     background-image: url("/assets/images/bgPattern.svg");
-    text-align: center;
   }
-  .sidebar-mobile.open {
-    left: 0;
+  .offcanvas {
+    width: 300px !important;
   }
   .sidebar-mobile ul {
     list-style: none;
@@ -373,14 +315,14 @@ body {
     border-bottom-left-radius: 0.5rem;
   }
   .sidebar-mobile ul li:first-child {
-    background-color: #F4F5F7;
+    background-color: #f4f5f7;
     border-top-left-radius: 0.5rem;
     border-bottom-left-radius: 0.5rem;
     padding-right: 0;
     margin-right: 0;
   }
   .sidebar-mobile ul li a {
-    color: #C6C6C6;
+    color: #c6c6c6;
     text-decoration: none;
     font-size: 1.25rem;
     display: block;
@@ -390,7 +332,7 @@ body {
     color: #333;
   }
   .sidebar-mobile li:hover {
-    background-color: #F4F5F7;
+    background-color: #f4f5f7;
   }
   .sidebar-mobile li:hover a,
   .sidebar-mobile li:first-child a {
@@ -414,26 +356,20 @@ body {
     grid-template-columns: 1rem repeat(2, 1fr) 1rem;
     grid-template-areas: "..... ..... ..... ....." "..... newWi newWi ....." "..... newWi newWi ....." "..... newWi newWi ....." "..... newWi newWi ....." "..... bLeft bMidd ....." "..... bLeft bMidd ....." "..... bLeft bMidd ....." "..... bLeft bMidd ....." "..... topRi topRi ....." "..... right right ....." "..... right right ....." "..... right right ....." "..... right right ....." "..... ..... ..... .....";
     gap: 1rem;
-    background-color: #F4F5F7;
+    background-color: #f4f5f7;
   }
   .db_newWidget {
     grid-template: 1fr 1fr/1fr 1fr 1fr;
     grid-template-areas: "main main totl" "main main totl";
   }
   .newWidget_main {
-    background-color: #C2E3F2;
-    background-image: url("/assets/images/illustration.svg");
-    background-repeat: no-repeat;
-    background-size: 25rem;
+    background-size: 26rem;
     background-position: 100% 90%;
-    border-top-left-radius: 0.5rem;
     border-bottom-left-radius: 0.5rem;
     border-top-right-radius: 0;
   }
   .newWidget_widgetTotals {
     border-bottom-left-radius: 0rem;
-    border-top-right-radius: 0.5rem;
-    border-bottom-right-radius: 0.5rem;
   }
   .totals-container {
     flex-direction: column;
@@ -480,7 +416,7 @@ body {
     grid-template-columns: 1rem 1fr 1rem;
     grid-template-areas: "..... ..... ....." "..... newWi ....." "..... newWi ....." "..... newWi ....." "..... newWi ....." "..... bLeft ....." "..... bLeft ....." "..... bLeft ....." "..... bLeft ....." "..... bMidd ....." "..... bMidd ....." "..... bMidd ....." "..... bMidd ....." "..... topRi ....." "..... right ....." "..... right ....." "..... right ....." "..... right ....." "..... ..... .....";
     gap: 1rem;
-    background-color: #F4F5F7;
+    background-color: #f4f5f7;
   }
   .newWidget_main {
     background-size: 20rem;
@@ -524,6 +460,8 @@ body {
   }
   .newWidget_main {
     background-position: 90% 100%;
+    border-top-right-radius: 0.5rem;
+    border-bottom-left-radius: 0;
   }
   .newWidget_text_container {
     gap: 0rem;
@@ -536,6 +474,9 @@ body {
   }
   .btn-newWidget {
     margin-top: 1.5rem;
+  }
+  .newWidget_widgetTotals {
+    border-bottom-left-radius: 0.5rem;
   }
   .totals-container {
     flex-direction: row;
@@ -642,7 +583,8 @@ body {
   .db_newWidget {
     min-width: 900px;
   }
-  .db_topRight, .db_right {
+  .db_topRight,
+  .db_right {
     max-width: 500px;
   }
 }

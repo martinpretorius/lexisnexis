@@ -3,17 +3,17 @@
   display: grid;
   grid-template: repeat(3, 1fr) 1fr / 1fr;
   grid-template-areas:
-    "main"
-    "main"
-    "main"
-    "totl";
+    'main'
+    'main'
+    'main'
+    'totl';
   background-color: whitesmoke;
   width: 100%;
 }
 
 .newWidget_main {
   background-color: $newWidget-bg-color;
-  background-image: url("/assets/images/illustration.svg");
+  background-image: url('/assets/images/illustration.svg');
   background-repeat: no-repeat;
   background-size: 30rem;
   background-position: 90% 50%;
@@ -52,7 +52,7 @@
   border-radius: 0.5rem;
   border: none;
   background-color: $primary-color;
-  color: #FFFFFF;
+  color: #ffffff;
   font-size: 1.125rem;
   display: flex;
   justify-content: center;
@@ -61,7 +61,7 @@
 
 .newWidget_widgetTotals {
   grid-area: totl;
-  background-color: #FFFFFF;
+  background-color: #ffffff;
   height: 100%;
   border-bottom-left-radius: 0.5rem;
   border-bottom-right-radius: 0.5rem;
