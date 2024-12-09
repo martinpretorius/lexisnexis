@@ -67,7 +67,7 @@
   }
 
   .sidebar-mobile ul li:first-child {
-    background-color: $bg-color;
+    background-color: $grid-bg-color;
     border-top-left-radius: 0.5rem;
     border-bottom-left-radius: 0.5rem;
     padding-right: 0;
@@ -87,7 +87,7 @@
   }
 
   .sidebar-mobile li:hover {
-    background-color: $bg-color;
+    background-color: $grid-bg-color;
   }
 
   .sidebar-mobile li:hover a,
@@ -130,7 +130,7 @@
       '..... right right .....'
       '..... ..... ..... .....';
     gap: 1rem;
-    background-color: $bg-color;
+    background-color: $grid-bg-color;
   }
 
   .db_newWidget {
@@ -225,7 +225,7 @@
       '..... right .....'
       '..... ..... .....';
     gap: 1rem;
-    background-color: $bg-color;
+    background-color: $grid-bg-color;
   }
 
   .newWidget_main {

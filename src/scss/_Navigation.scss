@@ -3,7 +3,6 @@
 }
 
 .sidebar {
-  width: calc(100vw / 5.68);
   width: 21.125rem;
   background-color: $sidebar-bg-color;
   background-image: url('/assets/images/bgPattern.svg');
@@ -58,11 +57,11 @@
 }
 
 .sidebar li:first-child {
-  background-color: $bg-color;
+  background-color: $grid-bg-color;
 }
 
 .sidebar li:hover {
-  background-color: $bg-color;
+  background-color: $grid-bg-color;
 }
 
 .sidebar li:hover .sidebar-text,
